@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting</title>
+    <link rel="stylesheet" href="place.css">
+</head>
+<body>
+
+    <div class="quiz-box" id="quizBox">
+    <h1 id="question">Question here</h1>
+
+    <div class="choice green" onclick="selectAnswer(0)" id="c0"></div>
+    <div class="choice yellow" onclick="selectAnswer(1)" id="c1"></div>
+    
+
+    <p id="progress">1 of 10 question</p>
+</div>
+
+<div class="result-box" id="resultBox">
+    <h1>Congratulations!!</h1>
+    <h2>Your Score is..</h2>
+    <div class="score"><span id="score">0</span>/10</div>
+    <button onclick="restart()">⟵ BACK</button>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="place.js"></script>
+
+</body>
+</html>
+</body>
+</html>

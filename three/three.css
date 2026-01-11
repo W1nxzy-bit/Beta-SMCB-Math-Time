@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', sans-serif;
+    background-image: url("/img/SELECTION.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/* Center Content */
+.page {
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(2px);
+    height: 100vh;
+}
+
+/* Title */
+h1 {
+    font-size: clamp(70px, 4vw, 48px);
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+/* Topic Card Layout */
+.topic-container {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Each icon box */
+.topic-card {
+    width: clamp(250px, 22vw, 150px);
+    height: clamp(250px, 22vw, 150px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s ease;
+    margin-top: 30px;
+}
+
+.topic-card img {
+    width: 90%;
+}
+
+/* Hover Animation */
+.topic-card:hover {
+    transform: scale(1.08);
+}
+
+/* Back button */
+.back-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: clamp(30px, 3.5vw, 22px);
+    background-color: #ff4f7d;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Custom Colors */
+.plus { background: #fce45b; }
+.minus { background: #a80000; }
+.numbers { background: #00728f; }
+
+/* Mobile Spacing */
+@media (max-width: 500px) {
+    .topic-container {
+        gap: 15px;
+    }
+}

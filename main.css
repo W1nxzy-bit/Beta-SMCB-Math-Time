@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html { 
+    scroll-behavior: smooth;
+}
+.nav-logo { 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2em 2em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* Left side (two logos) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+img.smcb {
+  width: 8%;
+  height: auto;
+}
+
+img.logo {
+  width: 15%;
+  height: auto;
+}
+
+/* Right side (text links) */
+.nav-text {
+  display: flex;
+  gap: 2em;
+}
+
+.nav-text a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: black;
+  transition: color 0.3s;
+  font-family: "Nunito", sans-serif;
+  margin-right: 4rem;
+}
+
+.nav-text a:hover {
+  color: rgb(0, 102, 255);
+}
+
+/* Add margin to content so it’s not hidden under the fixed navbar */
+section {
+  padding-top: 150px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .nav-text a {
+    font-size: 1.4rem;
+  }
+
+  img.logo {
+    width: 10%;
+  }
+
+  img.smcb {
+    width: 5%;
+  }
+}
+/* Home Section */
+#home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+}
+
+/* first img = background photo */
+#home img:first-of-type {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* second img = cartoon sticker */
+.sticker-one {
+  position: absolute; /* make it float inside #home */
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 35vw; /* responsive width based on viewport */
+  max-width: 700px; /* don’t get bigger than original design */
+  min-width: 200px; /* prevent from becoming too small */
+  height: auto;
+  transform: translateX(-10%) translateY(5%); /* fine-tuned for better placement */
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+/* gradual scaling at different screen sizes */
+@media (max-width: 1440px) {
+  .sticker-one {
+    transform: translateX(-1%) translateY(5%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .sticker-one {
+    width: 45vw;
+    transform: translateX(-15%) translateY(5%);
+  }
+}
+
+
+/* Text Content */
+.home-text {
+  position: relative;
+  z-index: 4;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.home-text h1 {
+  font-family: "Fredoka One", cursive;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.home-text p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* Responsive text scaling */
+@media (max-width: 768px) {
+  .home-text h1 {
+    font-size: 3.5rem;
+  }
+  .home-text p {
+    font-size: 1rem;
+  }
+}
+/* PLAY SECTION */
+#play {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* FIRST IMAGE — background */
+#play img:first-of-type {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+
+  object-position: center;
+  z-index: 1;
+  background-color: #bce7ff; /* optional background fill */
+}
+/* Sticker image in Play section */
+#play img:last-of-type {
+  position: absolute;
+  bottom: 0; /* keep it at the bottom of the screen */
+  left: 0;   /* stick to the left side */
+  width: 900vw;       /*change this to resize (bigger = higher number) */
+  max-width: 500px;  /* limits how big it can get */
+  min-width: 180px;  /* prevents it from being too small */
+  height: auto;
+  z-index: 2;
+  transform: translateX(-5%) translateY(35%); /* adjust position slightly */
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+/* for smaller screens */
+@media (max-width: 768px) {
+  #play img:last-of-type {
+    width: 35vw; /* smaller or larger depending on  layout */
+    transform: translateX(-5%) translateY(0);
+  }
+}
+
+
+/* main content */
+.play-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: black;
+  margin-top: -9vh; /*  removes top white gap */
+}
+
+.play-content h1 {
+  font-family: "Fredoka One", cursive;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  color: #000;
+  
+}
+
+/* Main container for the grade cards */
+.grade-container  {
+  display: flex;
+  justify-content: center; /* centers the cards horizontally */
+  align-items: center; /* aligns cards vertically within section */
+  gap: 5rem; /* space between each card */
+  flex-wrap: wrap; /* allows cards to move to next line on small screens */
+  margin-top: 2rem; /* adds space above cards */
+  text-decoration: none;
+}
+
+/* Individual grade card box */
+.grade-card {
+  width: 160px;
+  height: 220px;
+  border-radius: 20px; /* rounded corners for a friendly look */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fredoka One", cursive; /* fun, rounded font */
+  font-size: 5rem;
+  color: white;
+  border: 3px solid #000; /* black border for a cartoon effect */
+  cursor: pointer; /* shows clickable cursor */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover animation */
+}
+
+/*  Card colors */
+.grade1 { background-color: #9b59b6; } /* purple */
+.grade2 { background-color: #e74c3c; } /* red */
+.grade3 { background-color: #f1c40f; } /* yellow */
+
+/*  Hover animation for interaction */
+.grade-card:hover {
+  transform: translateY(-10px); /* lift effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* adds soft shadow */
+}
+
+/* Large monitors (e.g. 1440px and above) */
+@media (min-width: 1440px) {
+  .play-content {
+    margin-top: 1vh; /* brings the title + cards slightly up on large screens */
+  }
+
+  .play-content h1 {
+    font-size: 8.5rem; /* slightly larger heading for big displays */
+  }
+
+  .grade-card {
+    width: 180px;
+    height: 240px;
+    font-size: 5.5rem; /* scales cards up for large screens */
+  }
+
+  .grade-container {
+    gap: 9rem; /* slightly tighter spacing to keep centered */
+  }
+}
+
+/* 💻 Medium screens (tablets, small laptops) */
+@media (max-width: 1024px) {
+  .play-content h1 {
+    font-size: 2.5rem;
+    margin-top: -3vh; /* adjusts position to stay balanced */
+  }
+
+  .grade-card {
+    width: 130px;
+    height: 180px;
+    font-size: 4.2rem; /* smaller cards for medium screens */
+  }
+
+  .grade-container {
+    gap: 3rem; /* smaller spacing between cards */
+  }
+
+  .play-sticker {
+    width: 35vw; /* scales down sticker image */
+  }
+}
+
+/* FOOTER SECTION */
+#contact {
+  position: relative;
+  width: 100%;
+  min-height: 5vh; /* ensures full footer height */
+  background-color: #002147; /* fallback color */
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 40px 20px 30px;
+  overflow: hidden;
+}
+
+/* background image stays full size */
+#contact > img:first-of-type {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 600%;
+  object-fit: cover; /* fill the footer area */
+  object-position: center;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+/* hide the first standalone logos (we use them again in .footer-certifications) */
+#contact > img:nth-of-type(2),
+#contact > img:nth-of-type(3) {
+  display: none;
+}
+
+/* FOOTER TITLE */
+.footer-title {
+  position: relative;
+  z-index: 2;
+
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* CERTIFICATIONS CONTAINER */
+.footer-certifications {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 25px;
+}
+
+/* EACH LOGO + TEXT PAIR */
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LOGOS SAME VISUAL SIZE */
+.cert-item img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* TEXT BESIDE LOGOS */
+.cert-item span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* SOCIAL ICONS */
+.footer-links {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.footer-links img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-links img:hover {
+  transform: scale(1.1);
+}
+
+/* COPYRIGHT TEXT */
+.footer-credit {
+  position: relative;
+  z-index: 2;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* PC ➜ TABLET RESPONSIVE */
+@media (max-width:1024px){
+
+  /* NAV */
+  .nav-text a{font-size:1.25rem;margin-right:1.5rem;}
+  img.logo{width:14%;}
+  img.smcb{width:7%;}
+
+  /* HOME */
+  .home-text h1{font-size:2.4rem;}
+  .home-text p{font-size:0.95rem;}
+  .sticker-one{width:55vw;}
+
+  /* PLAY */
+  .play-content h1{font-size:2.5rem;}
+  .grade-card{width:120px;height:170px;font-size:3rem;}
+  .grade-container{gap:2rem;}
+
+  /* FOOTER */
+  .footer-title{font-size:1.3rem;}
+  .cert-item img{height:45px;}
+  .footer-links img{width:30px;height:30px;}
+}
+
+
+
