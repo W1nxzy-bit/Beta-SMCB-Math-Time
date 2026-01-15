@@ -1,9 +1,9 @@
 const questions = [
   { q:"6,432 – What is the place value of 4?", c:["Tens","Hundreds","Thousands","Ten Thousands"], a:1 },
   { q:"9,205 – What is the place value of 9?", c:["Tens","Hundreds","Thousands","Ten Thousands"], a:2 },
-  { q:"3,781 – What is the place value of 7?", c:["Tens","Hundreds","Thousands","Ten Thousands"], a:0 },
+  { q:"3,781 – What is the place value of 7?", c:["Tens","Hundreds","Thousands","Ten Thousands"], a:1 },
   { q:"8,064 – What is the place value of 8?", c:["Tens","Hundreds","Thousands","Ten Thousands"], a:2 },
-  { q:"4,590 – What is the place value of 5?", c:["Tens","Hundreds","Thousands","Ten Thousands"], a:2 },
+  { q:"4,590 – What is the place value of 5?", c:["Tens","Hundreds","Thousands","Ten Thousands"], a:1 },
   { q:"7,218 – What is the place value of 1?", c:["Tens","Hundreds","Thousands","Ten Thousands"], a:0 },
   { q:"2,046 – What is the place value of 6?", c:["Ones","Tens","Hundreds","Thousands"], a:0 },
   { q:"5,803 – What is the place value of 8?", c:["Tens","Hundreds","Thousands","Ten Thousands"], a:1 },
