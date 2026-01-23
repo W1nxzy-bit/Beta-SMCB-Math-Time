@@ -85,18 +85,23 @@ body{
     margin:20px 0;
 }
 
-/* BUTTON */
-.result-box button{
-    padding:12px 28px;
-    font-size:clamp(16px,4vw,22px);
-    background:#ff4b6e;
-    border:none;
-    color:white;
-    border-radius:12px;
-    cursor:pointer;
+/* Back button */
+.back-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: clamp(30px, 3.5vw, 22px);
+    background-color: #ff4f7d;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s ease;
 }
-.result-box button:hover{ transform:scale(1.05); }
 
+.back-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
 /* FEEDBACK COLORS FOR CORRECT AND WRONG ANSWERS */
 .correct{
     background:#00e676 !important;
