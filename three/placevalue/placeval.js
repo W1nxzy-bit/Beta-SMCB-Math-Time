@@ -31,35 +31,30 @@ function loadQuestion(){
     document.getElementById("progress").innerText = `${current+1} of 10 question`;
 }
 
-function selectAnswer(choice){
-    if(choice === questions[current].a) score++;
-    current++;
-    loadQuestion();
-}
-
-function restart(){
-    current = 0;
-    score = 0;
-    document.getElementById("quizBox").style.display="block";
-    document.getElementById("resultBox").style.display="none";
-    loadQuestion();
-}
+//for amidst of quiz function
 function selectAnswer(choice){
     const correct = questions[current].a;
     const allChoices = document.querySelectorAll(".choice");
 
     // disable double clicking
     allChoices.forEach(btn => btn.style.pointerEvents = "none");
+
+    // get click position for emoji pop
+    const rect = allChoices[choice].getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top;
+
     if(choice === correct){
         score++;
         allChoices[choice].classList.add("correct");
+        popEmojis("correct", x, y);
     } else {
         allChoices[choice].classList.add("wrong");
         allChoices[correct].classList.add("correct");
+        popEmojis("wrong", x, y);
     }
 
-    setTimeout(()=>{
-        // clean colors
+setTimeout(()=>{
         allChoices.forEach(btn=>{
             btn.classList.remove("correct","wrong");
             btn.style.pointerEvents = "auto";
@@ -67,9 +62,10 @@ function selectAnswer(choice){
 
         current++;
         loadQuestion();
-    }, 900);   // wait before next question
+    }, 900);
 }
 
+//for score functions
 function launchConfetti(){
     confetti({
         particleCount:180,
@@ -79,3 +75,23 @@ function launchConfetti(){
 }
 
 loadQuestion();
+
+//visual effects of the right and wrong 
+function popEmojis(type, x, y){
+    const emojis = type === "correct"
+        ? ["💖", "😄", "✅"]
+        : ["💔", "😢", "❌"];
+
+    emojis.forEach((emoji, i)=>{
+        const span = document.createElement("span");
+        span.className = "emoji-pop";
+        span.innerText = emoji;
+
+        span.style.left = (x + (i * 100 - 100)) + "px";
+        span.style.top = y + "px";
+
+        document.body.appendChild(span);
+
+        setTimeout(()=> span.remove(), 1200);
+    });
+}
