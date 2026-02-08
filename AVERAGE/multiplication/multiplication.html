@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicaiton Average</title>
+    <link rel="stylesheet" href="multiplication.css">
+</head>
+<body>
+     <!-- START SCREEN -->
+<div class="start-box" id="startBox">
+    <h1>🧮 Multiplication Quiz</h1>
+    <button class="start-btn" onclick="startCountdown()">START</button>
+</div>
+
+<!-- COUNTDOWN -->
+<div class="countdown" id="countdown"></div>
+
+<!-- QUIZ -->
+<div class="quiz-box" id="quizBox">
+    <div id="timer">⏱ 15</div>
+    <h1 id="question"></h1>
+
+    <div class="choice green" onclick="selectAnswer(0)" id="c0"></div>
+    <div class="choice yellow" onclick="selectAnswer(1)" id="c1"></div>
+    <div class="choice pink" onclick="selectAnswer(2)" id="c2"></div>
+
+    <p id="progress"></p>
+</div>
+
+<!-- RESULT -->
+<div class="result-box" id="resultBox">
+    <h1 id="resultTitle"></h1>
+    <h2 id="resultMessage"></h2>
+
+    <div class="score"><span id="score">0</span>/10</div>
+
+    <button class="retry-btn" onclick="retryQuiz()">🔄 Try Again</button>
+    <a href="../medium.html" class="back-btn" id="backBtn">⟵ Back</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="multiplication.js"></script>
+</body>
+</html>

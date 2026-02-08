@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka One", sans-serif;
+}
+
+/* MAIN SECTION */
+.topic-section{
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BACKGROUND */
+.topic-bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* TITLE */
+.topic-title{
+  position: relative;
+  z-index: 2;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: #000;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* GRID */
+.topic-grid{
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 260px));
+  gap: 3rem;
+  justify-content: center;
+}
+
+/* CARD */
+.topic-card{
+  background: var(--card-color, #ffffff); /* ← THIS LINE ADDS COLOR */
+
+  border-radius: 30px;
+  border: 4px solid #000;
+
+  height: 170px;
+  text-decoration: none;
+  color: #000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.topic-card span{
+  margin-bottom: 10px;
+}
+
+/* IMAGE INSIDE CARD */
+.topic-card img{
+  width: 150px;
+  height: auto;
+}
+
+/* TEXT */
+.topic-card span{
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+/* BACK BUTTON – GRID SLOT */
+.back-btn{
+  width: 140px;
+  height: 50px;
+
+  align-self: center;
+  justify-self: center;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ff5a7d;
+  color: #000;
+  border-radius: 14px;
+}
+
+/* MINI VISUAL EFFECT */
+.topic-card:hover{
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* CLICK EFFECT */
+.topic-card:active{
+  transform: scale(0.96);
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS */
+
+/* LARGE MONITORS */
+@media (min-width: 1440px){
+  .topic-grid{
+    gap: 4rem;
+  }
+}
+
+/* TABLET / iPAD */
+@media (max-width: 1024px){
+  .topic-grid{
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 2.5rem;
+  }
+}

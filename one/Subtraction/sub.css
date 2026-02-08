@@ -123,6 +123,36 @@ body{
     z-index: 9999;
 }
 
+.retry-btn{
+    display:none;
+    margin:15px auto;
+    padding:14px 28px;
+    font-size:clamp(18px,4vw,26px);
+    background:#ffd966;
+    border:none;
+    border-radius:12px;
+    font-weight:bold;
+    cursor:pointer;
+    animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+}
+
+.sad-animate{
+    animation:shakeSad .8s infinite;
+}
+
+@keyframes shakeSad{
+    0%{transform:translateX(0);}
+    25%{transform:translateX(-6px);}
+    50%{transform:translateX(6px);}
+    75%{transform:translateX(-6px);}
+    100%{transform:translateX(0);}
+}
+
 @keyframes emojiFloat {
     0% {
         transform: translateY(0) scale(0.6);

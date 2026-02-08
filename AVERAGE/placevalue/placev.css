@@ -1,0 +1,183 @@
+html, body{
+    width:100%;
+    height:100%;
+    margin:0;
+    font-family:'Comic Sans MS', cursive;
+
+    /* BACKGROUND IMAGE */
+    background-image: url("../../img/Quiz\ Bg.\ A.png"); /* ← change path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* START SCREEN */
+.start-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+.start-btn{
+    font-size:30px;
+    padding:14px 36px;
+    border:none;
+    border-radius:14px;
+    background:#4caf50;
+    color:white;
+    cursor:pointer;
+}
+
+/* COUNTDOWN */
+.countdown{
+    display:none;
+    font-size:80px;
+    font-weight:bold;
+}
+
+/* QUIZ */
+.quiz-box{
+    display:none;
+    position:relative;
+    width:90%;
+    max-width:700px;
+    padding:30px;
+    border-radius:25px;
+    background:#79c3ff;
+    text-align:center;
+}
+
+/* TIMER */
+#timer{
+    display:none;
+    position:absolute;
+    top:15px;
+    right:20px;
+    background:#ff1744;
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* QUESTION */
+#question{
+    font-size:40px;
+}
+
+/* CHOICES */
+.choice{
+    margin:12px 0;
+    padding:20px;
+    border-radius:14px;
+    font-size:28px;
+    cursor:pointer;
+    transition:0.2s;
+}
+.choice:hover{ transform:scale(1.05); }
+
+.green{background:#b7ff8e;}
+.yellow{background:#ffe492;}
+.pink{background:#ffb2ec;}
+.blue{ background:#b5e0ff; }
+
+#progress{ font-size:20px; }
+
+/* RESULT */
+.result-box{
+    display:none;
+    width:90%;
+    max-width:600px;
+    padding:30px;
+    border-radius:24px;
+    background:#014a7f;
+    color:white;
+    text-align:center;
+}
+.score{
+    font-size:70px;
+    margin:20px 0;
+}
+
+/* BUTTONS */
+.retry-btn{
+    padding:14px 28px;
+    font-size:26px;
+    background:#ffd966;
+    border:none;
+    border-radius:12px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    display:none;
+    margin-top:15px;
+    padding:12px 26px;
+    font-size:22px;
+    background:#ff4f7d;
+    color:black;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:bold;
+}
+.pass-show{
+    display:inline-block;
+    animation:fadeIn .6s ease;
+}
+@keyframes fadeIn{
+    from{opacity:0; transform:scale(0.9);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* ANSWER FEEDBACK */
+.correct{
+    background:#00e676 !important;
+    animation:correctPop .5s ease;
+    box-shadow:0 0 15px rgba(0,230,118,.8);
+}
+.wrong{
+    background:#ff1744 !important;
+    animation:wrongShake .5s ease;
+}
+
+@keyframes correctPop{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
+@keyframes wrongShake{
+    0%{transform:translateX(0);}
+    25%{transform:translateX(-6px);}
+    50%{transform:translateX(6px);}
+    75%{transform:translateX(-6px);}
+    100%{transform:translateX(0);}
+}
+
+/* FAIL EFFECT */
+.fail{
+    animation:wrongShake .4s ease-in-out 2;
+}
+
+/* EMOJI EFFECT */
+.emoji-pop{
+    position:fixed;
+    font-size:42px;
+    pointer-events:none;
+    animation:emojiFloat 1.2s ease-out forwards;
+    z-index:9999;
+}
+@keyframes emojiFloat{
+    0%{transform:translateY(0) scale(.5); opacity:0;}
+    20%{opacity:1;}
+    100%{transform:translateY(-90px) scale(1.2); opacity:0;}
+}
+.back-btn{
+    display:none;
+}
