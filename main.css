@@ -289,7 +289,7 @@ section {
 /* 💻 Medium screens (tablets, small laptops) */
 @media (max-width: 1024px) {
   .play-content h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-top: -3vh; /* adjusts position to stay balanced */
   }
 
