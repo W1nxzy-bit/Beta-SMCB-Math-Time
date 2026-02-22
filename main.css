@@ -143,7 +143,7 @@ section {
 }
 
 .home-text h1 {
-  font-family: "Fredoka One", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 3.5rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
@@ -218,7 +218,7 @@ section {
 }
 
 .play-content h1 {
-  font-family: "Fredoka One", cursive;
+  font-family: "Nunito", sans-serif;
   font-size: 5rem;
   margin-bottom: 2rem;
   color: #000;
@@ -244,7 +244,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Fredoka One", cursive; /* fun, rounded font */
+  font-family: "Nunito", sans-serif; /* fun, rounded font */
   font-size: 5rem;
   color: white;
   border: 3px solid #000; /* black border for a cartoon effect */
@@ -470,7 +470,7 @@ section {
 }
 
 .difficulty-content h1{
-  font-family: "Fredoka One", cursive;
+  font-family: "Nunito", sans-serif;
   font-size: 4.5rem;
 
 }
