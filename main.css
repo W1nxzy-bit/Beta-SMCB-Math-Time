@@ -83,6 +83,7 @@ section {
 #home {
   position: relative;
   height: 100vh;
+  height: 93vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -167,7 +168,7 @@ section {
 /* PLAY SECTION */
 #play {
   position: relative;
-  height: 100vh;
+  height: 93vh;
   overflow: hidden;
 }
 
@@ -413,7 +414,7 @@ section {
 
 #difficulty{
   position: relative;
-  height: 93vh;
+  min-height: 93vh;
   overflow: hidden;
   padding-top: 0 !important; /* override global section padding */
 }
@@ -580,32 +581,37 @@ section {
   .cert-item img{height:45px;}
   .footer-links img{width:30px;height:30px;}
  }
-/* ===== TABLET FONT FIX ===== */
-@media (min-width: 481px) and (max-width: 1024px){
+/* ===============================
+   FINAL TABLET FONT FIX
+   =============================== */
+@media (min-width: 768px) and (max-width: 1024px){
 
-    #question{
-        font-size: 28px;
-        line-height: 1.5;
-    }
+  .difficulty-content h1{
+    font-size: 2.6rem !important;
+  }
 
-    .choice{
-        font-size: 22px;
-        padding: 16px;
-    }
+  .difficulty-content h2{
+    font-size: 1.2rem !important;
+  }
 
-    #progress{
-        font-size: 18px;
-    }
+  .diff-btn{
+    font-size: 1.4rem !important;
+    padding: 18px 0 !important;
+  }
 
-    .score{
-        font-size: 60px;
-    }
+  .home-text h1{
+    font-size: 2.2rem !important;
+  }
 
-    .result-box h1{
-        font-size: 32px;
-    }
+  .home-text p{
+    font-size: 1rem !important;
+  }
 
-    .result-box h2{
-        font-size: 22px;
-    }
+  .play-content h1{
+    font-size: 2rem !important;
+  }
+
+  .grade-card{
+    font-size: 3rem !important;
+  }
 }
