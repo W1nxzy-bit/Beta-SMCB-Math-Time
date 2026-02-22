@@ -203,7 +203,7 @@ section {
 /* for smaller screens */
 @media (max-width: 768px) {
   #play img:last-of-type {
-    width: 35vw; /* smaller or larger depending on  layout */
+    width: 25vw; /* smaller or larger depending on  layout */
     transform: translateX(-5%) translateY(0);
   }
 }
@@ -272,7 +272,7 @@ section {
   }
 
   .play-content h1 {
-    font-size: 8.5rem; /* slightly larger heading for big displays */
+    font-size: 5.5rem; /* slightly larger heading for big displays */
   }
 
   .grade-card {
