@@ -215,13 +215,13 @@ section {
   z-index: 3;
   text-align: center;
   color: black;
-  margin-top: -9vh; /*  removes top white gap */
+  margin-top: -15vh; /*  removes top white gap */
 }
 
 .play-content h1 {
   font-family: "Nunito", sans-serif;
-  font-size: 5rem;
-  margin-bottom: 2rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
   color: #000;
   
 }
@@ -289,8 +289,8 @@ section {
 /* 💻 Medium screens (tablets, small laptops) */
 @media (max-width: 1024px) {
   .play-content h1 {
-    font-size: 1.5rem;
-    margin-top: -3vh; /* adjusts position to stay balanced */
+    font-size: 2.5rem;
+    margin-top: -2vh; /* adjusts position to stay balanced */
   }
 
   .grade-card {
