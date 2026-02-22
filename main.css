@@ -170,6 +170,7 @@ section {
   position: relative;
   height: 93vh;
   overflow: hidden;
+  font-family: "Nunito", sans-serif;
 }
 
 /* FIRST IMAGE — background */
@@ -234,6 +235,7 @@ section {
   flex-wrap: wrap; /* allows cards to move to next line on small screens */
   margin-top: 2rem; /* adds space above cards */
   text-decoration: none;
+  font-family: "Nunito", sans-serif;
 }
 
 /* Individual grade card box */
@@ -417,6 +419,7 @@ section {
   min-height: 93vh;
   overflow: hidden;
   padding-top: 0 !important; /* override global section padding */
+  font-family: "Nunito", sans-serif;
 }
 
 /* background */
