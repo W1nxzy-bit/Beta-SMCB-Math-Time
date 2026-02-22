@@ -143,7 +143,7 @@ section {
 }
 
 .home-text h1 {
-  font-family: "Fredoka One", cursive;
+  font-family: "Fredoka One", sans-serif;
   font-size: 3.5rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
@@ -581,37 +581,3 @@ section {
   .cert-item img{height:45px;}
   .footer-links img{width:30px;height:30px;}
  }
-/* ===============================
-   FINAL TABLET FONT FIX
-   =============================== */
-@media (min-width: 768px) and (max-width: 1024px){
-
-  .difficulty-content h1{
-    font-size: 2.6rem !important;
-  }
-
-  .difficulty-content h2{
-    font-size: 1.2rem !important;
-  }
-
-  .diff-btn{
-    font-size: 1.4rem !important;
-    padding: 18px 0 !important;
-  }
-
-  .home-text h1{
-    font-size: 2.2rem !important;
-  }
-
-  .home-text p{
-    font-size: 1rem !important;
-  }
-
-  .play-content h1{
-    font-size: 2rem !important;
-  }
-
-  .grade-card{
-    font-size: 3rem !important;
-  }
-}
