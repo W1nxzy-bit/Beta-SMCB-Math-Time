@@ -580,3 +580,32 @@ section {
   .cert-item img{height:45px;}
   .footer-links img{width:30px;height:30px;}
  }
+/* ===== TABLET FONT FIX ===== */
+@media (min-width: 481px) and (max-width: 1024px){
+
+    #question{
+        font-size: 28px;
+        line-height: 1.5;
+    }
+
+    .choice{
+        font-size: 22px;
+        padding: 16px;
+    }
+
+    #progress{
+        font-size: 18px;
+    }
+
+    .score{
+        font-size: 60px;
+    }
+
+    .result-box h1{
+        font-size: 32px;
+    }
+
+    .result-box h2{
+        font-size: 22px;
+    }
+}
